@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas POC</title>
+  <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="canvas-container">
+    <canvas id="drawing-area" height="500" width="500"></canvas>
+    <div class="canvas-container__tools">
+      <div class="tool pencil" onclick="selectPen()">Pencil</div>
+      <div class="tool eraser" onclick="toggleEraser()">Eraser</div>
+      <div class="tool clear" onclick="clearCanvas()">Clear</div>
+    </div>
+  </div>
+</body>
+</html>
