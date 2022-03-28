@@ -1,0 +1,62 @@
+img {
+  max-width: 100%; }
+
+html {
+  font-size: 10px; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background: white;
+  height: 100vh; }
+
+.players {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  align-items: flex-end;
+  transition: margin-bottom 0.5s cubic-bezier(0.33, -0.38, 1, 2.89); }
+  .players__player {
+    flex: 1;
+    width: fit-content;
+    display: grid;
+    justify-items: center; }
+  .players__avatar {
+    max-width: min(12.5rem, 100%);
+    min-width: 10rem; }
+  @media screen and (max-width: 767px) {
+    .players {
+      justify-content: flex-start;
+      overflow: auto;
+      padding-top: 1rem;
+      border-top: 1px solid black; }
+      .players__player {
+        flex: 0; }
+      .players--hidden {
+        margin-bottom: -110%; }
+        .players--hidden .toggle-button {
+          bottom: 1rem; }
+      .players .toggle-button {
+        display: block;
+        transition: bottom 0.5s ease-in-out; } }
+
+.toggle-button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: grey;
+  z-index: 100;
+  position: fixed;
+  bottom: 14rem;
+  left: 1rem; }
+
+.players-container {
+  position: relative;
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

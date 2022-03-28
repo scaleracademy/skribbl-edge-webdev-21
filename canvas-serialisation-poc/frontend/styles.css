@@ -16,6 +16,7 @@ body {
 #drawing-area {
   border: 1px solid black;
   margin: 1rem 0;
+  width: 100%;
 }
 
 .canvas-container__tools {
