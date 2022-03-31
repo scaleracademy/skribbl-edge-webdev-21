@@ -1,5 +1,4 @@
 const io = require('socket.io');
-const GameSession = require('../models/game_session');
 
 const ROUND_DURATION = 30;
 const ROUND_BUFFER = 5;

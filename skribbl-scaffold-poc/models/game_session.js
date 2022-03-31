@@ -3,6 +3,7 @@ const { v4 } = require('uuid');
 class GameSession {
   constructor() {
     this.sessionId = v4();
+    this.leader = null;
     this.players = [];
     this.drawer = null;
     
@@ -25,7 +26,12 @@ class GameSession {
   }
 
   addPlayer(player) {
+    if (this.players.length == 0) {
+      this.leader = player;
+    }
+
     this.players.push(player);
+    player.setActiveGame(this);
     this._scoreboard[player.playerId] = {
       points: 0,
       roundScores: {}
